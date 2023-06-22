@@ -8,6 +8,9 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class ProjectRepository implements ProjectInterface
 {
+    /**
+     * @param ProjectServiceInterface $service
+     */
     public function __construct(private readonly ProjectServiceInterface $service){}
 
     /**

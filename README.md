@@ -1,6 +1,7 @@
 ## About the Project
 
 This is a simple task manager application created in Laravel
+This application requires PHP ^8.1
 
 ## Installation
 - Create your database
