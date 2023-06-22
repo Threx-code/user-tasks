@@ -11,6 +11,10 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class ProjectService implements ProjectServiceInterface
 {
+    /**
+     * @param TaskHelper $helper
+     * @param Project $project
+     */
     public function __construct(private readonly TaskHelper $helper, private readonly Project $project){}
 
     /**
