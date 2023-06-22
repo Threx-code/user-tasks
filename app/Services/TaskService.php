@@ -13,6 +13,10 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class TaskService implements TaskServiceInterface
 {
+    /**
+     * @param TaskHelper $helper
+     * @param Task $task
+     */
     public function __construct(private readonly TaskHelper $helper, private readonly Task $task){}
 
     /**
@@ -49,7 +53,11 @@ class TaskService implements TaskServiceInterface
 
     }
 
-    public function getAProjectTasks($request)
+    /**
+     * @param $request
+     * @return mixed
+     */
+    public function getAProjectTasks($request): mixed
     {
         $whereRaw = $this->filterByName($request->name);
         $where = [

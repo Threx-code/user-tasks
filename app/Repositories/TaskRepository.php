@@ -4,12 +4,14 @@ namespace App\Repositories;
 
 use App\Contracts\TaskInterface;
 use App\Contracts\TaskServiceInterface;
-use App\Services\TaskService;
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class TaskRepository implements TaskInterface
 {
+    /**
+     * @param TaskServiceInterface $service
+     */
     public function __construct(private readonly TaskServiceInterface $service){
     }
 
