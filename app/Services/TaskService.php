@@ -13,15 +13,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class TaskService implements TaskServiceInterface
 {
-
-    private Task $task;
-    private TaskHelper $helper;
-
-    public function __construct()
-    {
-        $this->task = new Task();
-        $this->helper = new TaskHelper();
-    }
+    public function __construct(private readonly TaskHelper $helper, private readonly Task $task){}
 
     /**
      * @param $request
